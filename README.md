@@ -4,31 +4,21 @@
 
 # Apple WLOC 定位修改
 
-修改 Apple 网络定位服务 (WiFi/基站) 返回的坐标，实现 iOS 网络定位虚拟定位。打开在线选点页面选位置即可生效，无需手动填经纬度。
+修改 Apple iOS 网络定位服务 (WiFi/基站) 返回的坐标，实现 iOS 网络定位虚拟定位。打开在线选点页面选位置即可生效，无需手动填经纬度。
 
 > ⚠️ **iOS 27 beta 6 起，系统已禁止对 `gs-loc.apple.com` 进行 MITM 拦截。** 目前该版本及之后的 beta 版本暂时无法使用本项目，等待后续适配方案。
+> 
+> **确保你的 iOS版本< 27, 即iOS26版本以前(包含iOS26)均可支持**
+>
 
 ---
 
-## 订阅地址
+## 视频教程
+请移步**大龄老猿**博客[教程文章](https://www.9527878.xyz/article/location)
 
-**Surge:**
-https://raw.githubusercontent.com/Yu9191/wloc/refs/heads/main/modules/wloc.sgmodule
+## 原模块订阅地址已失效
+备用地址请参考博客:[大龄老猿](https://www.9527878.xyz/article/location)
 
-**Quantumult X:**
-https://raw.githubusercontent.com/Yu9191/wloc/refs/heads/main/modules/wloc.conf
-
-**Loon:**
-https://raw.githubusercontent.com/Yu9191/wloc/refs/heads/main/modules/wloc.lpx
-
-**Stash:**
-https://raw.githubusercontent.com/Yu9191/wloc/refs/heads/main/modules/wloc.stoverride
-
-**Shadowrocket(小火箭):**
-https://raw.githubusercontent.com/Yu9191/wloc/refs/heads/main/modules/wloc.module
-
-> Egern 可直接使用 Surge 模块
-> Stash 请直接订阅上面的 `.stoverride`，无需用 Script Hub 转换
 
 ### 默认扩展域名支持
 
@@ -62,6 +52,10 @@ https://raw.githubusercontent.com/Yu9191/wloc/refs/heads/main/modules/wloc.modul
 ---
 
 ### 关于地图链接解析（worker）
+
+#### 普通用户无需搭建该服务,使用上面的快捷指令(Shorts)即可. 以下内容与你无关
+
+#### 动手能力强用户往下看->
 
 为了让苹果地图和高德走同一条流程，链接统一发给 `wloc-spoofer.wloc.workers.dev/api/parse` 解析：
 
